@@ -1,7 +1,10 @@
 package arrays;
 
+import java.util.Random;
+
 public class _00_ArrayCheatSheet {
 	public static void main(String[] args) {
+		Random r = new Random();
 		//1. make an array of 5 Strings
 		String[] ppl = {"Anya", "Jack", "Oliver", "Kevin", "Lily"};
 		//2. print the third element in the array
@@ -15,11 +18,12 @@ public class _00_ArrayCheatSheet {
 		for(int i = 0; i < ppl.length; i++) {
 			System.out.println(ppl[i]);
 		}
+	
 		//6. make an array of 50 integers
 		 int[] bob = new int[51];
 		//7. use a for loop to make every value of the integer array a random number
 		for(int i = 0; i < bob.length; i++) {
-			bob[i] = 51;
+			bob[i] = r.nextInt(51);
 		}
 		//8. without printing the entire array, print only the smallest number in the array
 		System.out.println(bob[0]);
@@ -34,11 +38,27 @@ public class _00_ArrayCheatSheet {
 			}
 		System.out.println(bob[i]);
 		}
-		System.out.println(s);
+	
+		
+		
+		
 		//9 print the entire array to see if step 8 was correct
 		
 		//10. print the largest number in the array.
-		
+		int t = 0;
+		for(int i = 0; i < bob.length; i++) {
+			if(i == 0) {
+				t = bob[0];
+			}
+			else if(t < bob[i]) {
+				t = bob[i];
+				
+				
+			}
+		System.out.println(bob[i]);
+		}
+		System.out.println(s);
+		System.out.println(t);
 	}
 }
 
