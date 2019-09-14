@@ -35,12 +35,22 @@ public class _01_RobotRace {
 			
 			if(rob[t].getY() <=0 ) {
 				raceInProgress = false;
+				robotWinner = t; 
+				
 				break;
-				int tomatoe;
-				robotWinner = tomatoe; 
+				
 			}
 		}
 		}
+		rob[robotWinner].setPenColor(700, 100, 100);
+		rob[robotWinner].penDown();
+		rob[robotWinner].sparkle();
+		rob[robotWinner].turn(180);
+		rob[robotWinner].move(700);
+		
+	
+		
+		
 		// 6. use a while loop to repeat step 5 until a robot has reached the top of the
 		// screen.
 
@@ -48,6 +58,6 @@ public class _01_RobotRace {
 
 		// 8. try different races with different amounts of robots.
 
-		// 9. make the robots race around a circular track.
+		// 9. OPTIONAL: make the robots race around a circular track.
 	}
 }
